@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <title>Week 6 Practical Homework: Building a Browser Game</title>
+    <h1>Choice of Game</h1>
+        <h2>Frogger.io</h2>
+                <p>Can Frogger cross the river on the logs and lilypads as they pass rhythmically by? Frogger is an interactive, 1 player game with a dynamic interface in which the player must hop his frog across moving platforms to avoid being swept away by the river's swift currents. Game controls include wsad and arrow keys.</p>
+    <h1>Wireframe</h1>
+        <img src="https://imgur.com/SZ63kyY" alt="Excalidraw Wireframe Sketch. See week_6 repository for file details.">
+    <h1>Pseudocode</h1>
+        <ol>
+            <li>Render a gameboard in HTML using divs (10 x 11, depicted in wireframe), create div elements corresponding to each of the indexes of the 
+                arrays within the arrays.</li>
+            <li>Call render() everytime you want to update the gameboard (when frogger jumps/when lily-pads move)</li>
+            <li>Use setInterval() to time how frequently arrays will update and “the logs and lily-pads will float by”.</li>
+            <li>Use an incremental for loop to move across the screen left to right</li>
+            <li>Use a decremental for loop to move logs and lily pads from right to left</li>
+            <li>Create eventListener functionality for moving frogger using key-press: use an if statement to determine 'which key' and 'what functionality'</li>
+            <li>Create a function for frogger 'drowning', which generates a play again button! Write the event listener for said button, which will reset (re-render) the gameboard.</li>
+            <li>frogger logic: if frogger = 0, game ends. if frogger jumps on lily-pad, multiply by -1. if frogger jumps off a lily-pad, multiply by -1 to reset the color</li>
+            <li>generate new lily-pads by using recycling what is at the end of the array back to the front.</li>
+            <li>let frogger be represented by -1, and also by -3, so that he can 'appear' on the lily-pads and on the dirt.</li>
+            <li>potential trouble: infinite intervals running at the same time. Make sure the rest of the game works (create a manual function for cycling the logs to test the game) before working on the intervals. Be sure to use a closure with the intervals.</li>
+        </ol>
+</body>
+</html>
